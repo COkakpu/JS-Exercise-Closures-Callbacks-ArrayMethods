@@ -48,10 +48,15 @@ function processFirstItem(stringList, callback) {
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
 */
-function processLength(/* CODE HERE */) {
-  /* CODE HERE */
+let fruit = ["Orange", "Bannana", "peach", "grape", "Strawberry"];
+function processLength(list, callback) {
+  let daLength= list.length;
+  callback(daLength);
 }
 
+processLength(fruit, function (daLength) {
+return daLength;
+});
 /**
  * ### Challenge `processLastItem`
  * 
