@@ -71,9 +71,14 @@ return daLength;
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(/* CODE HERE */) {
-  /* CODE HERE */
+function processLastItem(stringList, callback) {
+  var stList = stringList.pop();
+  callback(stList);
 }
+
+processLastItem(fruit, function (stList) {
+  console.log(stList + stList);
+});
 
 /**
  * ### Challenge `processSum`
@@ -93,9 +98,13 @@ function processLastItem(/* CODE HERE */) {
  * [2] Invoking `processSum` passing `-5`, '-1', and `(num) => num + 1000`,
  * should return 994.
 */
-function processSum(/* CODE HERE */) {
-  /* CODE HERE */
+function processSum(num1, num2, callback) {
+  let numb = num1 + num2;
+  callback(numb);
 }
+processSum( 20, 40, function (numb){
+  console.log (numb + 'this is two numbers added together');
+} )
 
 /**
  * ### Challenge `processProduct`
